@@ -1,68 +1,68 @@
-# Proyecto de Academic Manager
+# Academic Manager Project
 
-Este proyecto consta de una carpeta principal "AcademicManager" que contiene el frontend construido con React Native y el SDK de Expo en la carpeta "my-app", y el backend desarrollado con Node.js, Express y MongoDB en la carpeta "server". La aplicación de frontend interactúa con el backend para administrar información académica.
+This project consists of a main folder "AcademicManager" containing the frontend built with React Native and the Expo SDK in the "my-app" folder, and the backend built with Node.js, Express and MongoDB in the "server" folder . The frontend application interacts with the backend to manage academic information.
 
 ## Frontend (Client)
 
-### Requisitos previos
-Asegúrate de tener Node.js instalado en tu sistema.
+### Previous requirements
+Make sure you have Node.js installed on your system.
 
-### Configuración
+### Setting
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://tu-repositorio-url.com/AcademicManager
-   cd AcademicManager/my-app
-   ```
+1. Clone this repository:
+    ```bash
+    git clone https://your-repository-url.com/AcademicManager
+    cd AcademicManager/my-app
+    ```
    
-2. Instala las dependencias:
-    ```bash
-    npm install
-    ```
+2. Install the dependencies:
+     ```bash
+     npm install
+     ```
 
-3. Inicia el cliente
-    ```bash
-    npx expo start
-    ```
+3. Start the client
+     ```bash
+     npx expo start
+     ```
     
-Te proporcionará opciones para ejecutar la aplicación en web y en dispositivos físicos o emuladores.
+It will provide you with options to run the application on the web and on physical devices or emulators.
 
 ## Backend (Server)
 
-### Requisitos previos
+### Previous requirements
 
-Asegúrate de tener Node.js y MongoDB instalados en tu sistema.
+Make sure you have Node.js and MongoDB installed on your system.
 
-### Configuración
+### Setting
 
-1. Clona este repositorio:
-    ```bash
-    git clone https://tu-repositorio-url.com/AcademicManager
-    cd AcademicManager/server
-    ```
+1. Clone this repository:
+     ```bash
+     git clone https://your-repository-url.com/AcademicManager
+     cd AcademicManager/server
+     ```
     
-2. Instala las dependencias:
-    ```bash
-    npm install
-    ```
+2. Install the dependencies:
+     ```bash
+     npm install
+     ```
     
-3. Configura la base de datos MongoDB en el archivo database.js:
-    ```javascript
-    mongoose.connect("mongodb://127.0.0.1:27017/academicManager");
-    ```
+3. Configure the MongoDB database in the database.js file:
+     ```javascript
+     mongoose.connect("mongodb://127.0.0.1:27017/academicManager");
+     ```
     
-4. Inicia el servidor
-    ```bash
-    npm run dev
-    ```
+4. Start the server
+     ```bash
+     npm run dev
+     ```
     
-## Dependencias del Backend
+## Backend dependencies
 
-- cors: Para habilitar el intercambio de recursos entre dominios.
-- express: El marco web utilizado para crear la API REST.
-- mongoose: Para interactuar con la base de datos MongoDB.
-- morgan: Para el registro de solicitudes HTTP.
+- cors: To enable resource sharing between domains.
+- express: The web framework used to create the REST API.
+- mongoose: To interact with the MongoDB database.
+- morgan: For logging HTTP requests.
 
-### Dependencias de Desarrollo (solo para entorno de desarrollo)
+### Development Dependencies (only for development environment)
 
-- nodemon: Herramienta que reinicia automáticamente el servidor al realizar cambios en el código durante el desarrollo.
+- nodemon: Tool that automatically restarts the server when making changes to the code during development.
