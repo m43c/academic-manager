@@ -1,0 +1,11 @@
+# Node.js dependencies
+node_modules/
+
+# Server log file (Morgan)
+server/logs/
+
+# MongoDB configuration file (if stored locally)
+server/data/
+
+# Development tool generated files
+npm-debug.log
