@@ -35,10 +35,9 @@ Make sure you have Node.js and MongoDB installed on your system.
 
 ### Setting
 
-1. Clone this repository:
+1. Change to the server folder:
      ```bash
-     git clone https://your-repository-url.com/AcademicManager
-     cd AcademicManager/server
+     cd impulso-store/server
      ```
     
 2. Install the dependencies:
