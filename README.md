@@ -11,7 +11,7 @@ Make sure you have Node.js installed on your system.
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/m43c/academic-manager
+    git clone https://github.com/m43c/academic-manager.git
     cd academic-manager/my-app
     ```
    
