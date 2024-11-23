@@ -4,8 +4,9 @@ This project consists of a main folder "AcademicManager" containing the frontend
 
 ## Screenshots
 
-![Home Screen](https://github.com/m43c/academic-manager/blob/main/my-app/assets/screenshots/home-screen.png?raw=true)
+![Login](https://github.com/m43c/academic-manager/blob/main/my-app/assets/screenshots/login-screen.png?raw=true)
 ![Student Form Screen](https://github.com/m43c/academic-manager/blob/main/my-app/assets/screenshots/student-form-screen.png?raw=true)
+![Student List Screen](https://github.com/m43c/academic-manager/blob/main/my-app/assets/screenshots/student-list-screen.png?raw=true)
 
 ## Frontend (Client)
 
