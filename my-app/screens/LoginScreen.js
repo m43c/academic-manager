@@ -5,6 +5,7 @@ import {
     TextInput,
     TouchableOpacity,
     StyleSheet,
+    Image,
     Alert,
 } from "react-native";
 
@@ -29,6 +30,11 @@ export default function LoginScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Iniciar Sesión</Text>
+
+            <Image
+                source={require("../assets/uajms-logo.png")}
+                style={styles.logo}
+            />
 
             <TextInput
                 style={styles.input}
@@ -59,10 +65,15 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     title: {
-        fontSize: 24,
+        fontSize: 28,
         fontWeight: "bold",
         marginBottom: 20,
         textAlign: "center",
+    },
+    logo: {
+        width: 200,
+        height: 280,
+        alignSelf: "center",
     },
     input: {
         padding: 10,
