@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 export default function Layout({ children }) {
@@ -15,6 +15,5 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         padding: 20,
-        backgroundColor: "#282828",
     },
 });

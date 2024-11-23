@@ -7,6 +7,7 @@ import {
     StyleSheet,
     Image,
     Alert,
+    StatusBar,
 } from "react-native";
 
 export default function LoginScreen({ navigation }) {
@@ -29,6 +30,8 @@ export default function LoginScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
+            <StatusBar style="light" backgroundColor="#000000" />
+
             <Text style={styles.title}>Iniciar Sesión</Text>
 
             <Image
@@ -76,8 +79,8 @@ const styles = StyleSheet.create({
         alignSelf: "center",
     },
     input: {
-        padding: 10,
-        marginBottom: 15,
+        paddingLeft: 2,
+        marginBottom: 30,
         borderBottomWidth: 2,
         borderRadius: 5,
     },
@@ -86,7 +89,6 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         alignItems: "center",
-        marginTop: 10,
     },
     buttonText: {
         color: "#fff",

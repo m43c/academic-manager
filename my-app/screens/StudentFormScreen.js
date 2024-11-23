@@ -69,7 +69,7 @@ export default function StudentFormScreen({ navigation, route }) {
         <Layout>
             <TextInput
                 style={styles.input}
-                cursorColor={"#282828"}
+                // cursorColor={"#282828"}
                 placeholder="Nombre"
                 placeholderTextColor={"#282828"}
                 value={student.name}
@@ -136,16 +136,17 @@ export default function StudentFormScreen({ navigation, route }) {
 const styles = StyleSheet.create({
     input: {
         width: "100%",
-        padding: 10,
-        marginBottom: 20,
+        paddingLeft: 2,
+        marginBottom: 30,
         borderRadius: 5,
+        borderBottomWidth: 2,
         fontSize: 16,
-        backgroundColor: "#ebdbb2",
     },
     buttonContainer: {
         width: "100%",
         flexDirection: "row",
         justifyContent: "space-between",
+        marginTop: 10,
     },
     button: {
         width: "47%",
@@ -154,14 +155,15 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     saveButton: {
-        backgroundColor: "#8ec07c",
+        backgroundColor: "#2e3b8f",
     },
     resetButton: {
-        backgroundColor: "#eebd35",
+        backgroundColor: "#888a85",
     },
     text: {
         fontSize: 16,
         fontWeight: "bold",
         textAlign: "center",
+        color: "#fff"
     },
 });

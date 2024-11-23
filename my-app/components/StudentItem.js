@@ -20,11 +20,17 @@ export default function StudentItem({ item, deleteStudent }) {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.textContainer}>
-                <Text style={styles.text}>{`Full name: ${item.name} ${
-                    item.lastName
-                }\nSubject: ${item.subject}\nSubject grades: ${
-                    item.subjectGrades
-                }\nAverage: ${average(item.subjectGrades)}`}</Text>
+                <Text style={styles.text}>Nombre Completo:</Text>
+                <Text>{`${item.name} ${item.lastName}\n`}</Text>
+                
+                <Text style={styles.text}>Materia:</Text>
+                <Text>{`${item.subject}\n`}</Text>
+                
+                <Text style={styles.text}>Notas de Materia:</Text>
+                <Text>{`${item.subjectGrades}\n`}</Text>
+                
+                <Text style={styles.text}>Promedio:</Text>
+                <Text>{average(item.subjectGrades)}</Text>
             </View>
 
             <View style={styles.buttonContainer}>
@@ -32,9 +38,7 @@ export default function StudentItem({ item, deleteStudent }) {
                     style={{ ...styles.button, ...styles.deleteButton }}
                     onPress={() => deleteStudent(item._id)}
                 >
-                    <Text style={{ ...styles.text, ...styles.buttonText }}>
-                        Delete
-                    </Text>
+                    <Text style={styles.buttonText}>Eliminar</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -45,9 +49,7 @@ export default function StudentItem({ item, deleteStudent }) {
                         })
                     }
                 >
-                    <Text style={{ ...styles.text, ...styles.buttonText }}>
-                        Edit
-                    </Text>
+                    <Text style={styles.buttonText}>Editar</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -56,31 +58,31 @@ export default function StudentItem({ item, deleteStudent }) {
 
 const styles = StyleSheet.create({
     mainContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
         padding: 10,
         marginBottom: 22,
-        borderRadius: 5,
-        backgroundColor: "#ebdbb2",
     },
     text: {
-        fontSize: 16,
-        color: "#282828",
+        fontWeight: "bold",
+    },
+    buttonContainer: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
     },
     button: {
+        width: 100,
         padding: 5,
-        marginBottom: 8,
+        marginTop: 20,
         borderRadius: 5,
     },
     buttonText: {
         fontWeight: "bold",
+        color: "#fff",
         textAlign: "center",
     },
     deleteButton: {
-        backgroundColor: "#eebd35",
+        backgroundColor: "#e4001c",
     },
     editButton: {
-        backgroundColor: "#8ec07c",
+        backgroundColor: "#2d3b8f",
     },
 });

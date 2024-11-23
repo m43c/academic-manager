@@ -32,15 +32,15 @@ export default function App() {
                     options={({ navigation }) => ({
                         title: "Gestor Académico",
                         headerStyle: {
-                            backgroundColor: "#7fa2ac",
+                            backgroundColor: "#e40e1a",
                         },
                         headerTitleStyle: {
                             fontWeight: "bold",
-                            color: "#282828",
+                            color: "#fff",
                         },
                         headerRight: () => (
                             <TouchableOpacity
-                                style={styles.touchableOpacity}
+                                style={styles.button}
                                 onPress={() =>
                                     navigation.navigate("StudentFormScreen")
                                 }
@@ -57,11 +57,11 @@ export default function App() {
                     options={{
                         title: "Estudiante",
                         headerStyle: {
-                            backgroundColor: "#7fa2ac",
+                            backgroundColor: "#e4001c",
                         },
                         headerTitleStyle: {
                             fontWeight: "bold",
-                            color: "#282828",
+                            color: "#fff",
                         },
                         headerTintColor: "#282828",
                     }}
@@ -72,14 +72,14 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-    touchableOpacity: {
+    button: {
         padding: 5,
         borderRadius: 5,
-        backgroundColor: "#d4879c",
+        backgroundColor: "#2e3b8f",
     },
     text: {
         fontSize: 16,
         fontWeight: "bold",
-        color: "#282828",
+        color: "#fff",
     },
 });
