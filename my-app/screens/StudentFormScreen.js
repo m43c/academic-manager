@@ -25,9 +25,6 @@ export default function StudentFormScreen({ navigation, route }) {
     const handleOnChangeText = (name, value) =>
         setStudent({ ...student, [name]: value });
 
-    /**
-     * ? Could stay on the form and not navigate to the HomeScreen
-     */
     const handleSubmit = async () => {
         try {
             if (!editing) {

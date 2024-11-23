@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
 import StudentFormScreen from "./screens/StudentFormScreen";
 
@@ -9,7 +10,22 @@ const Stack = createNativeStackNavigator();
 export default function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName="LoginScreen">
+                <Stack.Screen
+                    name="LoginScreen"
+                    component={LoginScreen}
+                    options={{
+                        title: "Login",
+                        headerStyle: {
+                            backgroundColor: "#7fa2ac",
+                        },
+                        headerTitleStyle: {
+                            fontWeight: "bold",
+                            color: "#282828",
+                        },
+                    }}
+                />
+
                 <Stack.Screen
                     name="HomeScreen"
                     component={HomeScreen}
@@ -34,7 +50,7 @@ export default function App() {
                         ),
                     })}
                 />
-                
+
                 <Stack.Screen
                     name="StudentFormScreen"
                     component={StudentFormScreen}
