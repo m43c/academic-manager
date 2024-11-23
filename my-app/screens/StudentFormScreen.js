@@ -50,7 +50,7 @@ export default function StudentFormScreen({ navigation, route }) {
 
     useEffect(() => {
         if (route.params && route.params.id) {
-            navigation.setOptions({ headerTitle: "Update Student" });
+            navigation.setOptions({ headerTitle: "Actualizar Estudiante" });
             setEditing(true);
 
             (async () => {
@@ -70,7 +70,7 @@ export default function StudentFormScreen({ navigation, route }) {
             <TextInput
                 style={styles.input}
                 cursorColor={"#282828"}
-                placeholder="Name"
+                placeholder="Nombre"
                 placeholderTextColor={"#282828"}
                 value={student.name}
                 onChangeText={(text) => handleOnChangeText("name", text)}
@@ -79,7 +79,7 @@ export default function StudentFormScreen({ navigation, route }) {
             <TextInput
                 style={styles.input}
                 cursorColor={"#282828"}
-                placeholder="Last name"
+                placeholder="Apellido"
                 placeholderTextColor={"#282828"}
                 value={student.lastName}
                 onChangeText={(text) => handleOnChangeText("lastName", text)}
@@ -88,7 +88,7 @@ export default function StudentFormScreen({ navigation, route }) {
             <TextInput
                 style={styles.input}
                 cursorColor={"#282828"}
-                placeholder="Subject"
+                placeholder="Materia"
                 placeholderTextColor={"#282828"}
                 value={student.subject}
                 onChangeText={(text) => handleOnChangeText("subject", text)}
@@ -97,7 +97,7 @@ export default function StudentFormScreen({ navigation, route }) {
             <TextInput
                 style={styles.input}
                 cursorColor={"#282828"}
-                placeholder="Subject Grades"
+                placeholder="Notas de materia"
                 placeholderTextColor={"#282828"}
                 value={student.subjectGrades}
                 onChangeText={(text) =>
@@ -110,7 +110,7 @@ export default function StudentFormScreen({ navigation, route }) {
                     style={{ ...styles.button, ...styles.resetButton }}
                     onPress={handleReset}
                 >
-                    <Text style={styles.text}>Reset</Text>
+                    <Text style={styles.text}>Restablecer</Text>
                 </TouchableOpacity>
 
                 {!editing ? (
@@ -118,14 +118,14 @@ export default function StudentFormScreen({ navigation, route }) {
                         style={{ ...styles.button, ...styles.saveButton }}
                         onPress={handleSubmit}
                     >
-                        <Text style={styles.text}>Save</Text>
+                        <Text style={styles.text}>Guardar</Text>
                     </TouchableOpacity>
                 ) : (
                     <TouchableOpacity
                         style={{ ...styles.button, ...styles.saveButton }}
                         onPress={handleSubmit}
                     >
-                        <Text style={styles.text}>Update</Text>
+                        <Text style={styles.text}>Actualizar</Text>
                     </TouchableOpacity>
                 )}
             </View>

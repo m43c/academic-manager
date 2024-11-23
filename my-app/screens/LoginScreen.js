@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from "react-native";
+import {
+    View,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    StyleSheet,
+    Alert,
+} from "react-native";
 
 export default function LoginScreen({ navigation }) {
     const [username, setUsername] = useState("");
@@ -12,32 +19,34 @@ export default function LoginScreen({ navigation }) {
         if (username === validUsername && password === validPassword) {
             navigation.replace("HomeScreen");
         } else {
-            Alert.alert("Login Failed", "Invalid username or password");
+            Alert.alert(
+                "Error de inicio de sesión",
+                "Usuario o contraseña incorrectos"
+            );
         }
     };
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Login</Text>
+            <Text style={styles.title}>Iniciar Sesión</Text>
+
             <TextInput
                 style={styles.input}
-                placeholder="Username"
-                placeholderTextColor="#ccc"
+                placeholder="Usuario"
                 value={username}
                 onChangeText={setUsername}
             />
 
             <TextInput
                 style={styles.input}
-                placeholder="Password"
-                placeholderTextColor="#ccc"
+                placeholder="Contraseña"
                 secureTextEntry
                 value={password}
                 onChangeText={setPassword}
             />
 
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                <Text style={styles.buttonText}>Login</Text>
+                <Text style={styles.buttonText}>Acceder</Text>
             </TouchableOpacity>
         </View>
     );
@@ -48,24 +57,21 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         padding: 20,
-        backgroundColor: "#282828",
     },
     title: {
         fontSize: 24,
         fontWeight: "bold",
-        color: "#ffffff",
         marginBottom: 20,
         textAlign: "center",
     },
     input: {
-        backgroundColor: "#444",
-        color: "#fff",
         padding: 10,
         marginBottom: 15,
+        borderBottomWidth: 2,
         borderRadius: 5,
     },
     button: {
-        backgroundColor: "#d4879c",
+        backgroundColor: "#2e3a8f",
         padding: 10,
         borderRadius: 5,
         alignItems: "center",

@@ -15,13 +15,13 @@ export default function App() {
                     name="LoginScreen"
                     component={LoginScreen}
                     options={{
-                        title: "Login",
+                        title: "Gestor Académico",
                         headerStyle: {
-                            backgroundColor: "#7fa2ac",
+                            backgroundColor: "#e40e1a",
                         },
                         headerTitleStyle: {
                             fontWeight: "bold",
-                            color: "#282828",
+                            color: "#fff",
                         },
                     }}
                 />
@@ -30,7 +30,7 @@ export default function App() {
                     name="HomeScreen"
                     component={HomeScreen}
                     options={({ navigation }) => ({
-                        title: "Academic Manager",
+                        title: "Gestor Académico",
                         headerStyle: {
                             backgroundColor: "#7fa2ac",
                         },
@@ -45,7 +45,7 @@ export default function App() {
                                     navigation.navigate("StudentFormScreen")
                                 }
                             >
-                                <Text style={styles.text}>New Student</Text>
+                                <Text style={styles.text}>Nuevo</Text>
                             </TouchableOpacity>
                         ),
                     })}
@@ -55,7 +55,7 @@ export default function App() {
                     name="StudentFormScreen"
                     component={StudentFormScreen}
                     options={{
-                        title: "Create Student",
+                        title: "Estudiante",
                         headerStyle: {
                             backgroundColor: "#7fa2ac",
                         },
